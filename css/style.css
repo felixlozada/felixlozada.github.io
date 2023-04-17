@@ -634,7 +634,7 @@ header::before {
 
 	.servicio {
 		width:60%;
-		height:400px;
+/*		min-height:400px;*/
 	}
 
 	/* Portafolio */
