@@ -1,0 +1,563 @@
+/* Variables CSS */
+:root {
+  --rojo: #9f1111;
+  --gris-fondo: #f8f9fa;
+  --gris-tarjeta: #ffffff;
+  --gris-borde: #e0e0e0;
+  --gris-texto: #444;
+  --gris-secundario: #6c757d;
+  --habilidad-barra-fondo: #eee;
+  --habilidad-barra-progreso: #c62828;
+}
+
+/* Reseteo y estilos globales */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+body {
+  background: var(--gris-fondo);
+  color: var(--gris-texto);
+  font-family: 'Segoe UI', Arial, sans-serif;
+  padding-top: 56px; /* Espacio para la barra fija */
+}
+
+/* Contenedores principales */
+.container {
+  background: var(--gris-tarjeta);
+  border: 1px solid var(--gris-borde);
+  border-radius: 12px;
+  padding: 1.5rem 2rem;
+  margin: 2rem auto;
+  max-width: 1440px;
+  width: 90%;
+}
+
+/* Componentes genéricos */
+.section-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--rojo);
+  margin: 2rem 0 1.2rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 2px solid var(--gris-borde);
+  text-align: left;
+}
+
+.card {
+  margin-bottom: 1rem;
+  border: none;
+  background: transparent;
+  display: flex;
+  align-items: flex-start;
+}
+
+.card-img-top,
+.card-text {
+  margin-bottom: 1rem;
+}
+
+.card-img-start {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  border-radius: 6px;
+  margin-right: 1rem;
+}
+
+.card-body {
+  padding: 0;
+}
+
+/* Sección: Header */
+.header-content {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  background: #fff;
+  border-bottom: 1px solid var(--gris-borde);
+}
+
+.foto-perfil {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.nombre {
+  font-size: 2.1rem;
+  font-weight: 700;
+  color: var(--rojo);
+  margin: 0;
+}
+
+.puesto {
+  font-size: 1.2rem;
+  color: var(--gris-secundario);
+  font-weight: 700;
+  margin: 0 0 0.5rem;
+}
+
+.contacto-lista {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0;
+}
+
+.contacto-lista li {
+  font-size: 1rem;
+  color: var(--gris-secundario);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.contacto-lista a {
+  color: var(--rojo);
+  text-decoration: none;
+}
+
+.contacto-lista a:hover {
+  text-decoration: underline;
+  color: var(--gris-texto);
+}
+
+/* Sección: Sobre Mí */
+#sobre-mi {
+  scroll-margin-top: 70px; /* Ajusta según la altura de la navbar */
+}
+
+/* Sección: Habilidades */
+.skills-list-section {
+  padding: 1.5rem 0;
+}
+
+.skill-item {
+  margin-bottom: 1.5rem;
+  color: var(--gris-texto);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.skill-icon img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.skill-content {
+  flex-grow: 1;
+}
+
+.skill-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+  color: var(--gris-texto);
+}
+
+.skill-bar-container {
+  width: 100%;
+  height: 6px;
+  background-color: var(--habilidad-barra-fondo);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.skill-bar-progress {
+  height: 100%;
+  background-color: var(--habilidad-barra-progreso);
+  border-radius: 3px;
+  transition: width 0.8s ease-in-out;
+  width: 0%;
+}
+
+/* Sección: Portafolio */
+.portfolio-grid {
+  padding: 1.5rem 0;
+}
+
+.portfolio-item {
+  margin-bottom: 2rem;
+  background: var(--gris-tarjeta);
+  border: 1px solid var(--gris-borde);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.portfolio-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.portfolio-body {
+  padding: 1rem;
+  text-align: center;
+}
+
+.portfolio-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--gris-texto);
+  margin-bottom: 0.75rem;
+}
+
+.portfolio-btn {
+  background-color: var(--rojo);
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+}
+
+.portfolio-btn:hover {
+  background-color: #c62828;
+  color: #fff;
+}
+
+/* Sección: Experiencia */
+.experience-list-section {
+  padding: 1.5rem 0;
+}
+
+.timeline {
+  position: relative;
+  margin: 0 auto;
+  padding: 1rem 0;
+  border-left: 3px solid var(--rojo);
+  max-width: 800px;
+}
+
+.timeline-event {
+  position: relative;
+  margin-bottom: 1.5rem;
+  padding-left: 2rem;
+}
+
+.timeline-event:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -1.65rem;
+  top: 0.5rem;
+  width: 1rem;
+  height: 1rem;
+  background: var(--rojo);
+  border-radius: 50%;
+  border: 2px solid #fff;
+  box-shadow: 0 0 0 3px #ffeaea;
+}
+
+.experiencia-titulo {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--gris-texto);
+  margin-bottom: 0.2rem;
+}
+
+.experiencia-puesto {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 0.3rem;
+}
+
+.experiencia-fecha {
+  font-size: 0.95rem;
+  color: #999;
+  margin-bottom: 0.5rem;
+}
+
+.experiencia-lista {
+  margin: 0;
+  padding-left: 1.2rem;
+  font-size: 0.9rem;
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #222;
+  padding: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar-brand {
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 600;
+  display: none; /* Oculta en desktop, visible en móvil */
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  justify-content: center;
+  width: 100%;
+}
+
+.navbar-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: color 0.3s ease, transform 0.2s ease;
+  padding: 0.5rem 0.75rem;
+}
+
+.navbar-links a:hover {
+  color: #c62828;
+  transform: translateY(-2px);
+}
+
+.navbar-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.toggle-icon {
+  display: block;
+  width: 25px;
+  height: 2px;
+  background-color: #fff;
+  position: relative;
+}
+
+.toggle-icon::before,
+.toggle-icon::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 2px;
+  background-color: #fff;
+  transition: transform 0.3s ease;
+}
+
+.toggle-icon::before {
+  top: -8px;
+}
+
+.toggle-icon::after {
+  top: 8px;
+}
+
+.navbar-toggle.active .toggle-icon {
+  background-color: transparent;
+}
+
+.navbar-toggle.active .toggle-icon::before {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+
+.navbar-toggle.active .toggle-icon::after {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* Footer */
+.footer {
+  background-color: #222;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  font-size: 0.9rem;
+  width: 100%;
+  position: relative;
+  bottom: 0;
+}
+
+.footer p {
+  margin: 0;
+}
+
+/* Media Queries */
+@media (max-width: 767px) {
+  .cv-card {
+    padding: 1rem;
+    margin: 1.5rem 0;
+  }
+
+  .header-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .nombre {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+  }
+
+  .puesto {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+  }
+
+  .contacto-lista {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .contacto-lista li {
+    font-size: 1rem;
+  }
+
+  .skill-icon img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .skill-name {
+    font-size: 1rem;
+  }
+
+  .portfolio-img {
+    height: 150px;
+  }
+
+  .timeline {
+    border-left: 2px solid var(--rojo);
+    padding: 0.5rem 0;
+    margin-left: 0.5rem;
+  }
+
+  .timeline-event {
+    padding-left: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .timeline-dot {
+    left: -1.2rem;
+    width: 0.8rem;
+    height: 0.8rem;
+    border: 1.5px solid #fff;
+    box-shadow: 0 0 0 2px #ffeaea;
+  }
+
+  .experiencia-titulo {
+    font-size: 1.1rem;
+  }
+
+  .experiencia-puesto {
+    font-size: 0.95rem;
+  }
+
+  .experiencia-fecha {
+    font-size: 0.85rem;
+    display: block;
+    margin-top: 0.2rem;
+  }
+
+  .experiencia-lista {
+    font-size: 0.85rem;
+    padding-left: 1rem;
+  }
+
+  .experience-list-section .badge {
+    margin-left: 0 !important;
+  }
+
+  .card {
+    margin-bottom: 0.75rem;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  .card-body .d-flex {
+    flex-direction: column;
+    align-items: flex-start !important;
+    justify-content: flex-start;
+    gap: 0.1rem;
+  }
+
+  .card-body {
+    padding: 0.25rem 0;
+  }
+
+  .experience-list-section {
+    padding: 0.75rem 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0.75rem 1.25rem;
+  }
+
+  .navbar-brand {
+    display: block;
+  }
+
+  .navbar-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #222;
+    padding: 1rem 0;
+    text-align: center;
+  }
+
+  .navbar-links.active {
+    display: flex;
+    justify-content: center;
+  }
+
+  .navbar-links li {
+    margin: 0.75rem 0;
+  }
+
+  .navbar-toggle {
+    display: block;
+  }
+
+  .navbar-links a {
+    font-size: 1.1rem;
+    padding: 0.75rem;
+  }
+}
