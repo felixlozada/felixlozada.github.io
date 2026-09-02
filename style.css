@@ -59,9 +59,13 @@ body {
   align-items: flex-start;
 }
 
+.card-title{
+  margin-bottom: 1rem;
+}
+
 .card-img-top,
 .card-text {
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 .card-img-start {
@@ -234,6 +238,7 @@ body {
   border-radius: 4px;
   text-decoration: none;
   font-size: 0.9rem;
+  font-weight: 700;
   transition: background-color 0.3s ease;
 }
 
